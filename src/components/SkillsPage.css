@@ -1,0 +1,70 @@
+.page-skills {
+  background:
+    radial-gradient(ellipse at top right, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+    var(--darker);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 255, 170, 0.1);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.skill-category-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skill-name {
+  min-width: 120px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--light);
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 10px;
+  animation: fillBar 1.5s ease-out;
+}
+
+@keyframes fillBar { from { width: 0; } }
+
+@media (max-width: 1200px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
