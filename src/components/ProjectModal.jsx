@@ -48,54 +48,15 @@ const ProjectModal = ({ project, onClose }) => {
                       <span style={{ background: '#28c840' }} />
                     </div>
                     <div className="mockup-url">
-                      {project.title.toLowerCase().replace(/ /g, '-')}.app
+                      {project.title.toLowerCase().replace(/ /g, '-')}
                     </div>
                   </div>
 
                   <div className="mockup-content" style={{ borderColor: shot.accent + '30' }}>
-                    <div className="mockup-sidebar">
-                      {['Dashboard', 'Analytics', 'Settings', 'Reports'].map((item, j) => (
-                        <div
-                          key={j}
-                          className="mockup-nav-item"
-                          style={{
-                            background: j === i % 4 ? shot.accent + '20' : 'transparent',
-                            color:      j === i % 4 ? shot.accent : '#ffffff50',
-                          }}
-                        >
-                          {item}
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mockup-main">
-                      <div className="mockup-heading" style={{ color: shot.accent }}>
-                        {shot.label}
-                      </div>
-                      <div className="mockup-grid">
-                        {[0, 1, 2].map((k) => (
-                          <div key={k} className="mockup-card" style={{ borderColor: shot.accent + '25' }}>
-                            <div className="mockup-card-bar" style={{ background: shot.accent + '40', width: `${60 + k * 15}%` }} />
-                            <div className="mockup-card-bar" style={{ background: shot.accent + '20', width: `${40 + k * 10}%`, marginTop: '6px' }} />
-                          </div>
-                        ))}
-                      </div>
-                      <div className="mockup-chart">
-                        {[...Array(8)].map((_, k) => (
-                          <div
-                            key={k}
-                            className="mockup-bar-item"
-                            style={{
-                              height:     `${30 + Math.sin(k + i) * 25 + 25}%`,
-                              background: `${shot.accent}${k === 5 ? 'cc' : '40'}`,
-                            }}
-                          />
-                        ))}
-                      </div>
-                    </div>
+                      <img src={shot.img} alt={shot.desc}/>
                   </div>
                 </div>
-                <div className="slide-caption">{shot.desc}</div>
+                {/* <div className="slide-caption">{shot.desc}</div> */}
               </div>
             ))}
           </div>

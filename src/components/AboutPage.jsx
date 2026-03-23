@@ -30,15 +30,15 @@ const AboutPage = () => (
 
           <div className="about-stats">
             <div className="stat">
-              <div className="stat-number">50+</div>
+              <div className="stat-number">1050+</div>
               <div className="stat-label">Projects Completed</div>
             </div>
             <div className="stat">
-              <div className="stat-number">5+</div>
+              <div className="stat-number">10+</div>
               <div className="stat-label">Years Experience</div>
             </div>
             <div className="stat">
-              <div className="stat-number">30+</div>
+              <div className="stat-number">150+</div>
               <div className="stat-label">Happy Clients</div>
             </div>
           </div>

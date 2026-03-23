@@ -113,11 +113,19 @@
 
 .mockup-content {
   flex: 1;
-  display: flex;
-  border-top: 1px solid;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start; /* or center */
+  justify-content: center;
+  min-height: 0; /* critical for flex children */
 }
 
+.mockup-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or "contain" if you don't want cropping */
+  display: block;
+}
 .mockup-sidebar {
   width: 130px;
   flex-shrink: 0;
